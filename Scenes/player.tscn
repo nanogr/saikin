@@ -1,15 +1,17 @@
-[gd_scene format=3 uid="uid://dv7177p10lwr6"]
+[gd_scene format=3 uid="uid://cd5d4unv77qdp"]
 
-[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_d1lmv"]
+[ext_resource type="Script" uid="uid://dtrgdtxlooov6" path="res://Scripts/player.gd" id="1_j3tii"]
+[ext_resource type="PackedScene" uid="uid://bc7gf3spdrglo" path="res://slime.glb" id="2_6v3t3"]
 
-[sub_resource type="SphereShape3D" id="SphereShape3D_t8up5"]
+[sub_resource type="SphereShape3D" id="SphereShape3D_d1lmv"]
 
-[node name="Player" type="Node3D" unique_id=2032649384]
+[node name="Player" type="CharacterBody3D" unique_id=4258479]
+script = ExtResource("1_j3tii")
 
-[node name="RigidBody3D" type="RigidBody3D" parent="." unique_id=1523353864]
-axis_lock_linear_y = true
-physics_material_override = SubResource("PhysicsMaterial_d1lmv")
+[node name="Pivot" type="Node3D" parent="." unique_id=1721289668]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D" unique_id=760560999]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.00024414063, 0)
-shape = SubResource("SphereShape3D_t8up5")
+[node name="SlimeMode" parent="Pivot" unique_id=1126048895 instance=ExtResource("2_6v3t3")]
+transform = Transform3D(14, 0, 0, 0, 14, 0, 0, 0, 14, 0.04751262, -0.027728386, 0.08435954)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1928463880]
+shape = SubResource("SphereShape3D_d1lmv")

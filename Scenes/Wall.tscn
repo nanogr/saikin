@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://8rt1musjscr0"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_d1lmv"]
+size = Vector3(2, 2, 360)
+
+[node name="Wall" type="RigidBody3D" unique_id=162863052]
+
+[node name="WallCollision" type="CollisionShape3D" parent="." unique_id=1382921753]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.4607382, 0)
+shape = SubResource("BoxShape3D_d1lmv")
+debug_color = Color(0.8666667, 0, 0.8627451, 1)
