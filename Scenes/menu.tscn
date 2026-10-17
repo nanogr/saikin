@@ -1,0 +1,77 @@
+[gd_scene format=3 uid="uid://dcp7y5ji32aul"]
+
+[ext_resource type="Script" uid="uid://bgb0fe68ni2wg" path="res://Scripts/menu.gd" id="1_xhh6f"]
+[ext_resource type="Texture2D" uid="uid://jsmbarkyy3h5" path="res://Imagenes/magic-medieval-greenhouse-17060862102AD.jpg" id="2_cayip"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qa3p6"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_svtx8"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7tdm4"]
+bg_color = Color(0, 0, 0, 1)
+
+[node name="Menu" type="Control" unique_id=1996467524]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_xhh6f")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1685206012]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.5019608, 0.6745098, 0.18039216, 1)
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=136956890]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 5.0
+offset_right = 1146.0
+offset_bottom = 640.0
+texture = ExtResource("2_cayip")
+expand_mode = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=86140426]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -124.25
+offset_top = -105.5
+offset_right = 124.25
+offset_bottom = 105.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 16
+
+[node name="startButton" type="Button" parent="VBoxContainer" unique_id=186590471]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_qa3p6")
+text = "START"
+
+[node name="creditsButton" type="Button" parent="VBoxContainer" unique_id=1646513214]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_svtx8")
+text = "CREDITS"
+
+[node name="exitButton" type="Button" parent="VBoxContainer" unique_id=466748616]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_7tdm4")
+text = "EXIT"
+
+[connection signal="pressed" from="VBoxContainer/startButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/creditsButton" to="." method="_on_credits_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/exitButton" to="." method="_on_exit_button_pressed"]

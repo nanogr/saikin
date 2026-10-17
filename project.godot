@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Sikin"
-run/main_scene="uid://7exggotxv2ly"
+run/main_scene="uid://dcp7y5ji32aul"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
 
