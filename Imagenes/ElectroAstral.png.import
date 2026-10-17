@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://jsmbarkyy3h5"
-path="res://.godot/imported/magic-medieval-greenhouse-17060862102AD.jpg-1f49c7f59340521f2aa694cd4bdeb5d6.ctex"
+uid="uid://hchijimu1j61"
+path="res://.godot/imported/ElectroAstral.png-c5ac27865e5fcff3f7aadb63f212054d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Imagenes/magic-medieval-greenhouse-17060862102AD.jpg"
-dest_files=["res://.godot/imported/magic-medieval-greenhouse-17060862102AD.jpg-1f49c7f59340521f2aa694cd4bdeb5d6.ctex"]
+source_file="res://Imagenes/ElectroAstral.png"
+dest_files=["res://.godot/imported/ElectroAstral.png-c5ac27865e5fcff3f7aadb63f212054d.ctex"]
 
 [params]
 
