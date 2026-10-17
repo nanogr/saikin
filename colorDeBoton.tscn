@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://b3yh7r5h6441m"]
+
+[node name="TextureButton" type="TextureButton" unique_id=486293605]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=24917845]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+color = Color(0.35686275, 0.8392157, 0.25882354, 1)
