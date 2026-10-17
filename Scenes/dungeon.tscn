@@ -1,10 +1,58 @@
 [gd_scene format=3 uid="uid://7exggotxv2ly"]
 
-[ext_resource type="PackedScene" uid="uid://dv7177p10lwr6" path="res://Scenes/player.tscn" id="1_oavya"]
+[ext_resource type="PackedScene" uid="uid://cd5d4unv77qdp" path="res://Scenes/player.tscn" id="1_oavya"]
+[ext_resource type="PackedScene" uid="uid://8rt1musjscr0" path="res://Scenes/Wall.tscn" id="2_dakn4"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dakn4"]
+albedo_color = Color(0.9843034, 0.9029843, 0.72227514, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_d1lmv"]
+material = SubResource("StandardMaterial3D_dakn4")
+size = Vector3(180, 2, 360)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_lt7kh"]
+size = Vector3(180, 2, 2)
 
 [node name="Dungeon" type="Node3D" unique_id=506303369]
 
-[node name="Camera3D" type="Camera3D" parent="." unique_id=1932505307]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.9575673)
+[node name="Player" parent="." unique_id=4258479 instance=ExtResource("1_oavya")]
+transform = Transform3D(100, 0, 0, 0, 100, 0, 0, 0, 100, 0, 2.0254517, 0)
 
-[node name="Player" parent="." unique_id=2032649384 instance=ExtResource("1_oavya")]
+[node name="LightSource" type="DirectionalLight3D" parent="." unique_id=1031727918]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 14.254955, 0)
+shadow_enabled = true
+
+[node name="CameraPivot" type="Marker3D" parent="." unique_id=31265922]
+transform = Transform3D(1, 0, 0, 0, 0.7071067, 0.7071067, 0, -0.7071067, 0.7071067, 0, 0, 0)
+
+[node name="Camera3D" type="Camera3D" parent="CameraPivot" unique_id=2084059677]
+transform = Transform3D(1, 0, 0, 0, 1.0000001, -3.5527137e-15, 0, 3.5527137e-15, 1.0000001, 0, 19, 43.061)
+
+[node name="Environment" type="Node3D" parent="." unique_id=494314907]
+
+[node name="Ground" type="MeshInstance3D" parent="Environment" unique_id=355787651]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0738678, -1.9073486e-06, -0.10036659)
+mesh = SubResource("BoxMesh_d1lmv")
+
+[node name="WallLeft" parent="Environment" unique_id=162863052 instance=ExtResource("2_dakn4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -87.72539, 0, 0)
+
+[node name="WallRight" parent="Environment" unique_id=2135873624 instance=ExtResource("2_dakn4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 82.79233, 0, 0)
+
+[node name="WallNorth" parent="Environment" unique_id=817253153 instance=ExtResource("2_dakn4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -180.45117, 0, -310.30176)
+
+[node name="WallCollision" parent="Environment/WallNorth" index="0" unique_id=1382921753]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 174.94211, 2.4607382, 134.53064)
+shape = SubResource("BoxShape3D_lt7kh")
+
+[node name="WallSouth" parent="Environment" unique_id=523624577 instance=ExtResource("2_dakn4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -175.45078, 0, 44.117958)
+
+[node name="WallCollision" parent="Environment/WallSouth" index="0" unique_id=1382921753]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 174.94211, 2.4607382, 134.53064)
+shape = SubResource("BoxShape3D_lt7kh")
+
+[editable path="Environment/WallNorth"]
+[editable path="Environment/WallSouth"]
