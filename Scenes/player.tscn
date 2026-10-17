@@ -7,6 +7,7 @@
 [node name="Player" type="Node3D" unique_id=2032649384]
 
 [node name="RigidBody3D" type="RigidBody3D" parent="." unique_id=1523353864]
+axis_lock_linear_y = true
 physics_material_override = SubResource("PhysicsMaterial_d1lmv")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D" unique_id=760560999]
