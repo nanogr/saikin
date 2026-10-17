@@ -3,6 +3,7 @@ extends Node
 signal PlayerCharacterChanged(name: String, color: String)
 signal SlimeAbsorbed(name: String, color: String, size: int)
 signal PlayerHealthReduced(damage: int)
+signal EnemyDefeated()
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
