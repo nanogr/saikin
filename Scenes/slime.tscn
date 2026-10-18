@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://bjnq8eaqs3gub"]
+
+[ext_resource type="Script" uid="uid://rmymvoaixu55" path="res://Scripts/slime.gd" id="1_qx0oh"]
+[ext_resource type="PackedScene" uid="uid://bc7gf3spdrglo" path="res://slime.glb" id="2_2rstu"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_t8up5"]
+albedo_color = Color(0.673198, 1.1070073e-06, 0.39660192, 1)
+albedo_texture_force_srgb = true
+uv1_scale = Vector3(36, 36, 36)
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_d1lmv"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_d1lmv"]
+radius = 0.04549225
+
+[node name="Slime" type="CharacterBody3D" unique_id=356255442]
+transform = Transform3D(40, 0, 0, 0, 40, 0, 0, 0, 40, 0, 0, 0)
+script = ExtResource("1_qx0oh")
+min_speed = 5.0
+max_speed = 10.0
+metadata/_custom_type_script = "uid://rmymvoaixu55"
+
+[node name="Pivot" type="Node3D" parent="." unique_id=1050345330]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Pivot" unique_id=196614071]
+material_override = SubResource("StandardMaterial3D_t8up5")
+mesh = SubResource("ArrayMesh_d1lmv")
+
+[node name="Slime_placeholder" parent="Pivot/MeshInstance3D" unique_id=1126048895 instance=ExtResource("2_2rstu")]
+transform = Transform3D(14, 0, 0, 0, 14, 0, 0, 0, 14, 0.04360045, -0.043313842, 0.08796451)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1649701742]
+shape = SubResource("SphereShape3D_d1lmv")
