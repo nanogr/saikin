@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://bc7gf3spdrglo" path="res://slime.glb" id="2_6v3t3"]
 [ext_resource type="Script" uid="uid://csjccrhj5wnx7" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_3d.gd" id="3_vgqql"]
 [ext_resource type="Script" uid="uid://8umksf8e80fw" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="4_fkybt"]
+[ext_resource type="AudioStream" uid="uid://bhjtvqr7pejlj" path="res://Audio/slime_move.wav" id="5_fkybt"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_d1lmv"]
 radius = 0.05
@@ -14,6 +15,7 @@ script = ExtResource("4_fkybt")
 [node name="Player" type="CharacterBody3D" unique_id=4258479]
 slide_on_ceiling = false
 script = ExtResource("1_j3tii")
+step_interval = 0.05
 
 [node name="Pivot" type="Node3D" parent="." unique_id=1721289668]
 
@@ -35,3 +37,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.2205748)
 script = ExtResource("3_vgqql")
 tween_resource = SubResource("Resource_x3wgy")
 metadata/_custom_type_script = "uid://csjccrhj5wnx7"
+
+[node name="MoveSound" type="AudioStreamPlayer" parent="." unique_id=473700133]
+stream = ExtResource("5_fkybt")
+volume_db = 1.0
