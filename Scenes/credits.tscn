@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cgomr6ff5kaw5"]
 
 [ext_resource type="Script" uid="uid://cmuj0ei7a5ifh" path="res://credits.gd" id="1_gryuy"]
-[ext_resource type="Texture2D" uid="uid://hchijimu1j61" path="res://Imagenes/ElectroAstral.png" id="1_r18jl"]
+[ext_resource type="Texture2D" uid="uid://du12lapgsb10t" path="res://Imagenes/ElectroAstral_credits.png" id="2_gryuy"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qa3p6"]
 bg_color = Color(0.5686275, 0.47843137, 0.35686275, 1)
@@ -28,16 +28,17 @@ color = Color(0.8243418, 0.7443195, 0.609477, 1)
 layout_mode = 0
 offset_right = 1147.0
 offset_bottom = 646.0
-texture = ExtResource("1_r18jl")
+texture = ExtResource("2_gryuy")
 expand_mode = 1
 
 [node name="exitMenuButton" type="Button" parent="." unique_id=464326629]
 layout_mode = 0
-offset_left = 947.0
-offset_top = 534.0
-offset_right = 1096.0
-offset_bottom = 593.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
+offset_left = 872.0
+offset_top = 477.0
+offset_right = 1021.0
+offset_bottom = 536.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 35
 theme_override_styles/normal = SubResource("StyleBoxFlat_qa3p6")
 text = "MENU"
 
