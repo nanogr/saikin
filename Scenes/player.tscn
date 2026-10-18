@@ -2,10 +2,17 @@
 
 [ext_resource type="Script" uid="uid://dtrgdtxlooov6" path="res://Scripts/player.gd" id="1_j3tii"]
 [ext_resource type="PackedScene" uid="uid://bc7gf3spdrglo" path="res://slime.glb" id="2_6v3t3"]
+[ext_resource type="Script" uid="uid://csjccrhj5wnx7" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_3d.gd" id="3_vgqql"]
+[ext_resource type="Script" uid="uid://8umksf8e80fw" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="4_fkybt"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_d1lmv"]
+radius = 0.05
+
+[sub_resource type="Resource" id="Resource_x3wgy"]
+script = ExtResource("4_fkybt")
 
 [node name="Player" type="CharacterBody3D" unique_id=4258479]
+slide_on_ceiling = false
 script = ExtResource("1_j3tii")
 
 [node name="Pivot" type="Node3D" parent="." unique_id=1721289668]
@@ -14,4 +21,17 @@ script = ExtResource("1_j3tii")
 transform = Transform3D(14, 0, 0, 0, 14, 0, 0, 0, 14, 0.04751262, -0.027728386, 0.08435954)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1928463880]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.026697189, 0, 0.016081698)
 shape = SubResource("SphereShape3D_d1lmv")
+
+[node name="CameraPivot" type="Node3D" parent="." unique_id=1633119744]
+transform = Transform3D(1, 0, 0, 0, 0.70710677, 0.70710677, 0, -0.70710677, 0.70710677, 0, 0.120789945, 1.2111334)
+
+[node name="PlayerCamera" type="Camera3D" parent="CameraPivot" unique_id=819304169]
+transform = Transform3D(1, 0, 0, 0, 1.0000001, 0, 0, 0, 1.0000001, 0, 0.72497493, -0.3004269)
+
+[node name="PhantomCamera3D" type="Node3D" parent="CameraPivot/PlayerCamera" unique_id=1542771692]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.2205748)
+script = ExtResource("3_vgqql")
+tween_resource = SubResource("Resource_x3wgy")
+metadata/_custom_type_script = "uid://csjccrhj5wnx7"
