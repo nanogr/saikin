@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://cgomr6ff5kaw5"]
+
+[ext_resource type="Script" uid="uid://cmuj0ei7a5ifh" path="res://credits.gd" id="1_gryuy"]
+[ext_resource type="Texture2D" uid="uid://hchijimu1j61" path="res://Imagenes/ElectroAstral.png" id="1_r18jl"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qa3p6"]
+bg_color = Color(0.5686275, 0.47843137, 0.35686275, 1)
+
+[node name="Credits" type="Control" unique_id=946900264]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_gryuy")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1589354428]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.8243418, 0.7443195, 0.609477, 1)
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1777312965]
+layout_mode = 0
+offset_right = 1147.0
+offset_bottom = 646.0
+texture = ExtResource("1_r18jl")
+expand_mode = 1
+
+[node name="exitMenuButton" type="Button" parent="." unique_id=464326629]
+layout_mode = 0
+offset_left = 947.0
+offset_top = 534.0
+offset_right = 1096.0
+offset_bottom = 593.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_qa3p6")
+text = "MENU"
+
+[connection signal="pressed" from="exitMenuButton" to="." method="_on_exit_menu_button_pressed"]
