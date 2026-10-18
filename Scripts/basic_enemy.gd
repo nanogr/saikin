@@ -20,3 +20,7 @@ func movimiento(delta: float) -> void:
 		velocity += get_gravity() * delta
 	
 	move_and_slide()
+	
+func _ready() -> void:
+	print("Ruta del enemigo: ", get_path())
+	print("Jugador encontrado: ", player)

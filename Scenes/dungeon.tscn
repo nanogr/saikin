@@ -17,7 +17,7 @@ size = Vector3(180, 2, 2)
 [node name="Dungeon" type="Node3D" unique_id=506303369]
 
 [node name="Player" parent="." unique_id=4258479 instance=ExtResource("1_oavya")]
-transform = Transform3D(100, 0, 0, 0, 100, 0, 0, 0, 100, 1.4727173, 59.49872, 61.658813)
+transform = Transform3D(100, 0, 0, 0, 100, 0, 0, 0, 100, 1.4727173, 59.49872, 15.254028)
 
 [node name="LightSource" type="DirectionalLight3D" parent="." unique_id=1031727918]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 14.254955, 0)
@@ -27,8 +27,8 @@ shadow_enabled = true
 transform = Transform3D(1, 0, 0, 0, 0.98987305, -0.14195475, 0, 0.14195475, 0.98987305, 0, 0, 0)
 
 [node name="Camera3D" type="Camera3D" parent="CameraPivot" unique_id=2084059677]
-transform = Transform3D(1, 0, 0, 0, 1.0000001, -3.5527137e-15, 0, 3.5527137e-15, 1.0000001, 0, 19, 43.061)
-fov = 8.437505
+transform = Transform3D(0.580108, 0.11562772, 0.80629086, -0.1156278, 0.99153894, -0.059001997, -0.80629104, -0.059002116, 0.58856934, 35.181946, 57.04196, 24.033161)
+fov = 45.0
 
 [node name="Environment" type="Node3D" parent="." unique_id=494314907]
 
@@ -57,7 +57,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 174.94211, 2.4607382, 134.530
 shape = SubResource("BoxShape3D_lt7kh")
 
 [node name="CharacterBody3D" parent="." unique_id=1873327307 instance=ExtResource("3_lt7kh")]
-transform = Transform3D(-0.6571135, 0, 0.7537917, 0, 1, 0, -0.7537917, 0, -0.6571135, 0, 0, 461.98047)
+transform = Transform3D(0.3216624, 0.9446928, -0.06394437, 0, -0.06753348, -0.997717, -0.9468544, 0.32092804, -0.02172298, -3.1885772, 69.36595, 4.9634132)
 
 [editable path="Environment/WallNorth"]
 [editable path="Environment/WallSouth"]
