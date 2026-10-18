@@ -5,6 +5,7 @@
 [ext_resource type="Script" uid="uid://dlkdfa02mbv6c" path="res://Scripts/slime_data.gd" id="2_iqbxe"]
 [ext_resource type="PackedScene" uid="uid://u85en8akqfrq" path="res://Scenes/environment.tscn" id="3_iqbxe"]
 [ext_resource type="Script" uid="uid://cm4uj3da7ghqw" path="res://Scenes/ask_merge.gd" id="4_l3tba"]
+[ext_resource type="AudioStream" uid="uid://6i0gurali8h" path="res://Audio/background.mp3" id="6_5v1xs"]
 
 [sub_resource type="Resource" id="Resource_l3tba"]
 script = ExtResource("2_iqbxe")
@@ -38,7 +39,7 @@ shadow_enabled = true
 shadow_bias = 0.447
 
 [node name="Player" parent="." unique_id=4258479 instance=ExtResource("1_oavya")]
-transform = Transform3D(40, 0, 0, 0, 40, 0, 0, 0, 40, 0, 0, -39)
+transform = Transform3D(40, 0, 0, 0, 40, 0, 0, 0, 40, 0, 37, 5)
 
 [node name="LightSource" type="DirectionalLight3D" parent="." unique_id=1031727918]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 80, 99.25496, -46)
@@ -75,5 +76,10 @@ script = ExtResource("4_l3tba")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6, 0)
 light_energy = 3.931
 light_size = 1.0
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1174366068]
+stream = ExtResource("6_5v1xs")
+volume_db = 4.105
+autoplay = true
 
 [connection signal="timeout" from="SlimeTimer" to="." method="_on_slime_timer_timeout"]

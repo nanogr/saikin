@@ -5,10 +5,15 @@ extends CharacterBody3D
 var facing_direction: Vector2
 var target_velocity = Vector3.ZERO
 
+@export var step_interval: float = 0.4 # Time in seconds between steps
+var step_timer: float = 0.0
+
 var is_trying_to_merge = false
 var slime_to_merge: SlimeData
 
 var merged_slimes: Array[SlimeData] = []
+
+@onready var move_sound = $MoveSound
 
 func _ready() -> void:
 	GameManager.SlimeApproached.connect(handle_on_slime_collide)
@@ -29,8 +34,18 @@ func _physics_process(delta: float) -> void:
 	else:
 		velocity.x = move_toward(velocity.x, 0, speed)
 		velocity.z = move_toward(velocity.z, 0, speed)
+	
+	play_movement_sound()
 
 	move_and_slide()
+	
+	
+func play_movement_sound() -> void:
+	if Input.is_action_pressed("move_down") or Input.is_action_pressed("move_up") or Input.is_action_pressed("move_left") or Input.is_action_pressed("move_right"):
+		if !move_sound.playing:
+			move_sound.play()
+	else:
+		move_sound.stop()
 	
 func handle_on_slime_collide(slime: SlimeData) -> void:
 	is_trying_to_merge = true
