@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://7chxy4dxj62w"
-path="res://.godot/imported/Menu.jpeg-8cab81323e446a2ba6d40dc8383314d8.ctex"
+uid="uid://dkwx2lg0msrie"
+path="res://.godot/imported/ElectroAstral_credits.png-9244fb5e3d5b53278f7dedff752f2643.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Imagenes/Menu.jpeg"
-dest_files=["res://.godot/imported/Menu.jpeg-8cab81323e446a2ba6d40dc8383314d8.ctex"]
+source_file="res://Imagenes/ElectroAstral_credits.png"
+dest_files=["res://.godot/imported/ElectroAstral_credits.png-9244fb5e3d5b53278f7dedff752f2643.ctex"]
 
 [params]
 
