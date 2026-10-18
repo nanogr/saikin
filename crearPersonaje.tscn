@@ -1,0 +1,145 @@
+[gd_scene format=3 uid="uid://bgrnscnqxbffv"]
+
+[ext_resource type="Script" uid="uid://dsogrnco66wxo" path="res://Scripts/character_creation_manager.gd" id="1_bhy1g"]
+[ext_resource type="PackedScene" uid="uid://b3yh7r5h6441m" path="res://colorDeBoton.tscn" id="2_3640k"]
+[ext_resource type="Texture2D" uid="uid://bjibce1lxwlf1" path="res://ElectroAstral.jpg" id="2_m08m0"]
+[ext_resource type="FontFile" uid="uid://bfl16vqk76qhu" path="res://Roller Coaster.ttf" id="4_wpir8"]
+
+[node name="Node3D" type="Node3D" unique_id=1475364195]
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=546207927]
+
+[node name="UI-character" type="Control" parent="." unique_id=399293112]
+layout_mode = 3
+anchor_right = 0.106000006
+offset_right = -82.11201
+offset_bottom = 40.0
+script = ExtResource("1_bhy1g")
+
+[node name="ElectroAstral" type="Sprite2D" parent="UI-character" unique_id=1809139992]
+position = Vector2(576, 336)
+scale = Vector2(0.6, 0.6166667)
+texture = ExtResource("2_m08m0")
+
+[node name="CharacterName" type="TextEdit" parent="UI-character" unique_id=1094708309]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 20.825
+anchor_bottom = 2.7
+offset_left = 160.0
+offset_top = 336.0
+offset_right = -439.0
+offset_bottom = 278.0
+
+[node name="ContenedorDeColores" type="GridContainer" parent="UI-character" unique_id=1100349038]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 19.625
+anchor_bottom = 12.438001
+offset_left = 664.0
+offset_top = 160.0
+offset_right = 287.0
+offset_bottom = -206.52002
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI-character/ContenedorDeColores" unique_id=137556641]
+layout_mode = 2
+
+[node name="ColorVerde" parent="UI-character/ContenedorDeColores" unique_id=546801816 instance=ExtResource("2_3640k")]
+layout_mode = 2
+
+[node name="ColorRect" parent="UI-character/ContenedorDeColores/ColorVerde" index="0" unique_id=24917845]
+offset_left = 272.0
+offset_top = 180.0
+offset_right = 312.0
+offset_bottom = 220.0
+
+[node name="ColorMorado" parent="UI-character/ContenedorDeColores" unique_id=486293605 instance=ExtResource("2_3640k")]
+layout_mode = 2
+
+[node name="ColorRect" parent="UI-character/ContenedorDeColores/ColorMorado" index="0" unique_id=24917845]
+offset_left = 216.0
+offset_top = 176.0
+offset_right = 256.0
+offset_bottom = 216.0
+color = Color(0.8, 0.39215687, 0.99607843, 1)
+
+[node name="ColorAmarillo" parent="UI-character/ContenedorDeColores" unique_id=517763184 instance=ExtResource("2_3640k")]
+layout_mode = 2
+
+[node name="ColorRect" parent="UI-character/ContenedorDeColores/ColorAmarillo" index="0" unique_id=24917845]
+offset_left = 160.0
+offset_top = 172.0
+offset_right = 200.0
+offset_bottom = 212.0
+color = Color(0.87058824, 0.8039216, 0.14901961, 1)
+
+[node name="ColorRojo" parent="UI-character/ContenedorDeColores" unique_id=1706753857 instance=ExtResource("2_3640k")]
+layout_mode = 2
+
+[node name="ColorRect" parent="UI-character/ContenedorDeColores/ColorRojo" index="0" unique_id=24917845]
+offset_left = 104.0
+offset_top = 168.0
+offset_right = 144.0
+offset_bottom = 208.0
+color = Color(0.8156863, 0.13725491, 0.15294118, 1)
+
+[node name="ColorAzul" parent="UI-character/ContenedorDeColores" unique_id=138118483 instance=ExtResource("2_3640k")]
+layout_mode = 2
+
+[node name="ColorRect" parent="UI-character/ContenedorDeColores/ColorAzul" index="0" unique_id=24917845]
+offset_left = 328.0
+offset_top = 164.0
+offset_right = 368.0
+offset_bottom = 204.0
+color = Color(0.21960784, 0.78431374, 0.9490196, 1)
+
+[node name="EtiquetaElegirNombre" type="RichTextLabel" parent="UI-character" unique_id=617707115]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 7.6000004
+anchor_bottom = 6.0000005
+offset_left = 160.0
+offset_top = 288.0
+offset_right = 96.0
+offset_bottom = 87.999985
+theme_override_colors/default_color = Color(0.21639282, 0.19394714, 0.20357198, 1)
+theme_override_fonts/normal_font = ExtResource("4_wpir8")
+theme_override_font_sizes/normal_font_size = 33
+text = "Escribe tu nombre..."
+
+[node name="EtiquetaElegirColor" type="RichTextLabel" parent="UI-character" unique_id=1180289677]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 7.6000004
+anchor_bottom = 6.0000005
+offset_left = 768.0
+offset_top = 288.0
+offset_right = 704.0
+offset_bottom = 95.999985
+theme_override_colors/default_color = Color(0.21639282, 0.19394714, 0.20357198, 1)
+theme_override_fonts/normal_font = ExtResource("4_wpir8")
+theme_override_font_sizes/normal_font_size = 33
+text = "Elige tu color"
+
+[node name="Button" type="Button" parent="UI-character" unique_id=913673802]
+layout_mode = 0
+offset_left = 512.0
+offset_top = 440.0
+offset_right = 736.0
+offset_bottom = 480.0
+theme_override_colors/font_color = Color(0.9902709, 0.8880476, 0.8101965, 1)
+theme_override_fonts/font = ExtResource("4_wpir8")
+theme_override_font_sizes/font_size = 32
+text = "Comenzar"
+
+[connection signal="button_down" from="UI-character/ContenedorDeColores/ColorVerde" to="UI-character" method="_on_color_verde_button_down"]
+[connection signal="button_down" from="UI-character/ContenedorDeColores/ColorMorado" to="UI-character" method="_on_color_morado_button_down"]
+[connection signal="button_down" from="UI-character/ContenedorDeColores/ColorAmarillo" to="UI-character" method="_on_color_amarillo_button_down"]
+[connection signal="button_down" from="UI-character/ContenedorDeColores/ColorRojo" to="UI-character" method="_on_color_rojo_button_down"]
+[connection signal="button_down" from="UI-character/ContenedorDeColores/ColorAzul" to="UI-character" method="_on_color_azul_button_down"]
+
+[editable path="UI-character/ContenedorDeColores/ColorVerde"]
+[editable path="UI-character/ContenedorDeColores/ColorMorado"]
+[editable path="UI-character/ContenedorDeColores/ColorAmarillo"]
+[editable path="UI-character/ContenedorDeColores/ColorRojo"]
+[editable path="UI-character/ContenedorDeColores/ColorAzul"]
