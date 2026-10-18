@@ -324,10 +324,8 @@ shape = SubResource("BoxShape3D_lt7kh")
 
 [node name="mapa" type="StaticBody3D" parent="." unique_id=1122406221]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4042969, 1.8281147, 1.3112127)
-visible = false
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="mapa" unique_id=521934245]
-visible = false
 shape = SubResource("BoxShape3D_ul6a7")
 debug_color = Color(0.89411765, 0.6313726, 0.78039217, 1)
 

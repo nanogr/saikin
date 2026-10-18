@@ -5,7 +5,8 @@ var character_color : String
 #func handlecharactercolor()
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	GameManager.imput_name.connect()
+	#GameManager.imput_name.connect()
+	pass
 	
 	
 func _on_text_edit_text_changed() -> void: 
